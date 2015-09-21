@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+<pre class="bg-blue white inline-block p2"><%== @maze %></pre>
+
+<p>
+  <strong>Width:</strong>
+  <%= @maze.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @maze.height %>
+</p>
+
+<%= link_to 'Solve', '#', id: 'solve', data: {maze: @maze.to_json} %>
+<%= link_to 'Back', mazes_path %>
+<%= link_to 'Destroy', @maze, method: :delete, data: { confirm: 'Are you sure?' } %>
